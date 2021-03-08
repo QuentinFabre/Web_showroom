@@ -9,7 +9,18 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web_Showroom.json", {onProgress: UnityProgress});
+      const supportsWebGL2 = !!document.createElement('canvas').getContext('webgl2');
+      if (!supportsWebGL2) {
+       // do something to display message
+      } else {
+       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web_Showroom.json", {
+            compatibilityCheck: function(unityInstance, onsuccess, onerror) {
+                if (!UnityLoader.SystemInfo.hasWebGL) {
+                    unityInstance.popup("Your browser does not support WebGL", [{text: "OK", callback: onerror}]);
+                    document.getElementById("unityContainer").style.display = "none";
+                    document.getElementById("fallbackHeader").style.display = "block";
+                }
+      //var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web_Showroom.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
