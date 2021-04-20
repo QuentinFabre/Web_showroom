@@ -78,8 +78,8 @@ function ScormSimulator()
 
             this.data["cmi.launch_data"] = "Launch data from the ims manifest file will be here.";
 
-            this.data["cmi.learner_id"] = "rdescartes";
-            this.data["cmi.learner_name"] = "Rene Descartes";
+            this.data["cmi.learner_id"] = "qfabre";
+            this.data["cmi.learner_name"] = "Quentin Fabre";
 
 			this.data["cmi.learner_preference.audio_captioning"] = "-1";
             this.data["cmi.learner_preference.audio_level"] = "80.0";
