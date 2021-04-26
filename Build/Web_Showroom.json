@@ -3,7 +3,7 @@
 "productName": "Drone_Showroom",
 "productVersion": "0.1",
 "dataUrl": "Web_Showroom.data.unityweb",
-"wasmCodeUrl": "Web_Showroom.wasm",
+"wasmCodeUrl": "Web_Showroom.wasm.code.unityweb",
 "wasmFrameworkUrl": "Web_Showroom.wasm.framework.unityweb",
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
